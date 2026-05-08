@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>MangoMart | Fresh Premium Mangoes from Rajshahi</title>
+  <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+  <div id="toast" class="toast-msg"></div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <h2><i class="fas fa-user-circle"></i> Login to MangoMart</h2>
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="loginEmail" placeholder="your@email.com">
+      </div>
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="loginPassword" placeholder="••••••">
+      </div>
+      <button class="modal-btn" id="doLoginBtn">Login</button>
+      <div class="modal-footer">Demo: any email & password works</div>
+    </div>
+  </div>
+
+  <div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Your Order</h3>
+      <span class="close-modal" id="closeCart" style="font-size:28px; cursor:pointer;">&times;</span>
+    </div>
+    <div id="cartItems" class="cart-items">
+      <p style="text-align:center; color:#9B7B5C;">Your cart is empty</p>
+    </div>
+    <div class="cart-total" id="cartTotal">Total: BDT 0</div>
+    <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <h1>MangoMart</h1>
+      </div>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <ul class="nav-links" id="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="btn-login" id="openLoginBtn"><i class="fas fa-user"></i> Login</button></li>
+        <li><button class="btn-order-nav" id="openCartBtn">Order Now <span id="cartCount" class="cart-badge">0</span></button></li>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <div class="hero">
+        <div class="hero-content">
+          <div class="badge">✨ 22Brix • Naturally ripened</div>
+          <h2>Fresh Premium <span class="highlight">Mangoes</span><br>Delivered to Your <span class="highlight">Doorstep</span></h2>
+          "Savor the authentic taste of nature with our <strong>Naturally Ripened, Handpicked Premium Mangoes</strong>.
+          Sourced directly from the sun-drenched orchards of <strong>Rajshahi & Chapai Nawabganj</strong>,
+          we ensure a <strong>100% chemical-free</strong>, juicy, and unforgettable experience delivered
+          straight to your <strong>doorstep</strong>."
+          <div class="price">BDT 180/kg <span>(farmers price)</span></div>
+          <div class="hero-buttons">
+            <button class="btn-primary" id="shopNowScrollBtn">Shop Now</button>
+            <a href="https://www.youtube.com/watch?v=MyH34_Gvn-Y" target="_blank" style="text-decoration: none;">
+              <button class="btn-secondary" id="watchFarmBtn">Watch Farm Story</button>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <p>10,000+</p><span>Happy customers</span>
+            </div>
+            <div>
+              <p>24+</p><span>Mango varieties</span>
+            </div>
+          </div>
+        </div>
+        <img src="img/mango.jpg.webp" alt="Fresh Premium Mango">
+        <img src="img/mango2.jpg.jpg" alt="Fresh Premium Mango">
+      </div>
+    </section>
+
+    <div class="trust-row">
+      <div class="trust-text"><i class="fas fa-star-of-life"></i> Trusted by 10,000+ happy customers</div>
+      <div style="display: flex; gap: 32px;">
+        <div><strong>2,785+</strong><br>Orchards</div>
+        <div><strong>13+</strong><br>Years</div>
+        <div><strong>8,356+</strong><br>5⭐ reviews</div>
+        <div><strong>27%</strong><br>Sweeter this year</div>
+      </div>
+    </div>
+
+    <div class="why-choose" id="about">
+      <div class="section-title">Why Choose Us</div>
+      <div class="features-grid">
+        <div class="feature-card"><i class="fas fa-leaf"></i>
+          <h3>Chemical-Free</h3>
+          <p>No artificial ripening</p>
+        </div>
+        <div class="feature-card"><i class="fas fa-truck-fast"></i>
+          <h3>2-Day Delivery</h3>
+          <p>Freshness guaranteed</p>
+        </div>
+        <div class="feature-card"><i class="fas fa-hand-holding-heart"></i>
+          <h3>Farmer First</h3>
+          <p>Direct from Rajshahi</p>
+        </div>
+        <div class="feature-card"><i class="fas fa-trophy"></i>
+          <h3>22Brix+</h3>
+          <p>Superior sweetness</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="best-selling" id="shop">
+      <div class="section-title">Best Selling Mango Varieties</div>
+      <div class="variety-grid">
+        <div class="variety-card" data-name="Himsagar" data-price="190">
+          <div class="variety-img"><img src="img/himsagor.jpg.webp" alt="Himsagar"></div>
+          <div class="variety-info">
+            <h3>Himsagar</h3>
+            <p>King of aroma | Juicy & fiberless</p><strong>BDT 190/kg</strong><button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="variety-card" data-name="Langra" data-price="170">
+          <div class="variety-img"><img src="img/lengra.jpg.webp" alt="Langra"></div>
+          <div class="variety-info">
+            <h3>Langra</h3>
+            <p>Sweet tang | golden pulp</p><strong>BDT 170/kg</strong><button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="variety-card" data-name="Amrapali" data-price="210">
+          <div class="variety-img"><img src="img/Amrapali.jpg.jpg" alt="Amrapali"></div>
+          <div class="variety-info">
+            <h3>Amrapali</h3>
+            <p>Deep orange, rich flavour</p><strong>BDT 210/kg</strong><button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="variety-card" data-name="Gopalbog" data-price="165">
+          <div class="variety-img"><img src="img/gopalbog.jpg.jpg" alt="Gopalbog"></div>
+          <div class="variety-info">
+            <h3>Gopalbog</h3>
+            <p>Sweet tang | golden pulp</p><strong>BDT 165/kg</strong><button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="variety-card" data-name="Khirsapath" data-price="175">
+          <div class="variety-img"><img src="img/khirsapath.jpg.webp" alt="Khirsapath"></div>
+          <div class="variety-info">
+            <h3>Khirsapath</h3>
+            <p>Sweet tang | golden pulp</p><strong>BDT 175/kg</strong><button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="variety-card" data-name="Lokhonbog" data-price="185">
+          <div class="variety-img"><img src="img/Lokkhonvog-Mango.jpg.jpg" alt="Lokhonbog"></div>
+          <div class="variety-info">
+            <h3>Lokhonbog</h3>
+            <p>Sweet tang | golden pulp</p><strong>BDT 185/kg</strong><button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="variety-card" data-name="Bombai" data-price="170">
+          <div class="variety-img"><img src="img/bombai.jpg.webp" alt="Bombai"></div>
+          <div class="variety-info">
+            <h3>Bombai</h3>
+            <p>Sweet tang | golden pulp</p><strong>BDT 170/kg</strong><button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="variety-card" data-name="Subornorekha" data-price="195">
+          <div class="variety-img"><img src="img/subornorekha.jpg.jpg" alt="Subornorekha"></div>
+          <div class="variety-info">
+            <h3>Subornorekha</h3>
+            <p>Sweet tang | golden pulp</p><strong>BDT 195/kg</strong><button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="variety-card" data-name="Fazli" data-price="250">
+          <div class="variety-img"><img src="img/Fazli-Mango.jpg.jpg" alt="Fazli"></div>
+          <div class="variety-info">
+            <h3>Fazli</h3>
+            <p>Giant size, unique taste</p><strong>BDT 250/kg</strong><button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-counter">
+      <div>
+        <p>2,785+</p><span>Orchard Partners</span>
+      </div>
+      <div>
+        <p>13+</p><span>Years Excellence</span>
+      </div>
+      <div>
+        <p>8,356+</p><span>Happy Families</span>
+      </div>
+      <div>
+        <p>27%</p><span>More Sweetness</span>
+      </div>
+    </div>
+
+    <div class="reviews" id="reviews">
+      <div class="section-title">Customer Reviews</div>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"The most juicy and fresh Himsagar mangoes I've ever had! The delivery was also very fast."</p>
+          <strong>— Md.Tajuddin</strong>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Super fresh and completely chemical-free. The aroma of these mangoes is unforgettable. Highly recommended!"</p>
+          <strong>— Sadiya Jannat Tuli</strong>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Authentic taste directly from Rajshahi. It's rare to find such premium quality mangoes online."</p>
+          <strong>— Nowrin Jannat</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="festival-banner">
+      <h2 style="font-size: 2rem; font-weight: 800;">🍑 Royal Mango Collection</h2>
+      <p style="margin: 16px 0;">Summer Mango Festival is live! Mangoes at your door in 3 days.</p>
+      <button class="btn-primary" id="festivalOrderBtn" style="background: #C0392B;">Order Premium Mangoes Today</button>
+    </div>
+  </div>
+
+  <footer id="contact" style="scroll-margin-top: 80px;">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="color:#E67E22;">MangoMart</h3>
+          <br>
+          <p>Fresh mangoes from Rajshahi & Chapai Nawabganj</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <br>
+          <p>mttajuddin01@gmail.com<br><br>+880 1754713814</p>
+          <br>
+          <br>
+          <div class="..................................................."></div>
+        </div>
+        <div class="social">
+          <h4>Follow us</h4>
+          <br>
+          <a href="https://www.linkedin.com/in/md-tajuddin-08134022b/" target="_blank" title="Connect on LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.facebook.com/mt.tajuddin.3" target="_blank" title="Follow on Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy 2026 <strong>MangoMart Bangladesh</strong>. Premium Mangoes. All rights reserved.</p>
+        <p>Developed with ❤️ by <strong>Md. Tajuddin</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
